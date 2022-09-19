@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="Entities created, some library added">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/chess/Board.fxml" afterDir="false" />
+    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="Board create with gridpane 8x8 and background image.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chess/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chess/Board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chess/Board.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chess/Board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chess/Board.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +66,21 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaaum\IdeaProjects\ChessJavaFX\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pieces" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.chess.Main" />
+      <module name="ChessJavaFX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,7 +93,7 @@
       <workItem from="1663594779910" duration="464000" />
       <workItem from="1663595248590" duration="776000" />
       <workItem from="1663596037017" duration="48000" />
-      <workItem from="1663596100015" duration="1748000" />
+      <workItem from="1663596100015" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="Project started">
       <created>1663595371137</created>
@@ -96,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663596915161</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Board create with gridpane 8x8 and background image.">
+      <created>1663598159797</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663598159797</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +136,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project started" />
     <MESSAGE value="Entities created, some library added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entities created, some library added" />
+    <MESSAGE value="Board create with gridpane 8x8 and background image." />
+    <option name="LAST_COMMIT_MESSAGE" value="Board create with gridpane 8x8 and background image." />
   </component>
 </project>
