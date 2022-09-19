@@ -4,26 +4,88 @@ import com.Enums.Colors;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
+import java.util.ArrayList;
+
 public class ChessPieces {
 
     private final Enum<Colors> color;
     private String position;
     private AnchorPane positioningridpane;
-    private int moveCount = 0;
 
-    public ChessPieces(Enum<Colors> color, String position, GridPane gridPane) {
-        this.color = color;
-        this.position = position;
-        for (int i = 0; i < 63; i++) {
-            if(gridPane.getChildren().get(i).getId().equals(position)){
-                positioningridpane = (AnchorPane) gridPane.getChildren().get(i);
-                return;
-            }
-        }
+    public AnchorPane[][] getAnchorPanes() {
+        return anchorPanes;
     }
 
-    public AnchorPane[] PossibleMoves(){
+    private AnchorPane[][] anchorPanes;
+    private int moveCount = 0;
+
+    public ChessPieces(Enum<Colors> color, String position, GridPane gridPane, AnchorPane[][] anchorPanes) {
+        this.color = color;
+        this.position = position;
+        this.anchorPanes = anchorPanes;
+        positioningridpane = getAnchorPaneAsChessNotation(position, gridPane);
+    }
+    public int getAnchorPaneX(){
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(this.getAnchorPanes()[i][j]==this.getPositioningridpane()){
+                    return i;
+                }
+            }
+        }
+        return 0;
+    }
+    public int getAnchorPaneY(){
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(this.getAnchorPanes()[i][j]==this.getPositioningridpane()){
+                    return j;
+                }
+            }
+        }
+        return 0;
+    }
+    public AnchorPane getAnchorPaneAsChessNotation(String position,GridPane gridPane){
+        for (int i = 0; i < 64; i++) {
+            if(gridPane.getChildren().get(i).getId().equals(position)){
+                return (AnchorPane) gridPane.getChildren().get(i);
+            }
+        }
         return null;
+    }
+    public AnchorPane[] PossibleMoves(boolean diagonal, boolean straight) {
+        int positionx = getAnchorPaneX(), positiony = getAnchorPaneY(), k=0,l=0;
+        ArrayList<AnchorPane> listPossibleMoves = new ArrayList<>();
+        for (int i = 1; i < 8; i++) {
+            if(straight) {
+                if (positionx - i >= 0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony]); //W
+                }if (positionx + i <= 7) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony]); //E
+                }if(positiony-i>=0){
+                    listPossibleMoves.add(getAnchorPanes()[positionx][positiony - i]); //N
+                }if (positiony + i <= 7) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx][positiony + i]); //S
+                }
+            }
+            if(diagonal) {
+                if (positionx - i >= 0 && positiony - i >= 0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony - i]);//NW
+                }if (positionx + i <= 7 && positiony + i <= 7) {
+                            listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony + i]);//SE
+                }if (positionx - i >= 0 && positiony + i <= 7) {
+                        listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony + i]);//SW
+                }if (positionx + i <= 7 && positiony - i >= 0) {
+                        listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony - i]); //NE
+                }
+            }
+        }
+        int listSize = listPossibleMoves.size();
+        AnchorPane[] possibleMovesAsArray = new AnchorPane[listSize];
+        for (int i = 0; i < listSize; i++) {
+            possibleMovesAsArray[i] = listPossibleMoves.get(i);
+        }
+        return possibleMovesAsArray;
     }
 
     public void setPosition(String position) {
@@ -50,11 +112,6 @@ public class ChessPieces {
         this.positioningridpane = positioningridpane;
     }
     public void setPositioningridpane(String position, GridPane gridPane) {
-        for (int i = 0; i < 63; i++) {
-            if(gridPane.getChildren().get(i).getId().equals(position)){
-                positioningridpane = (AnchorPane) gridPane.getChildren().get(i);
-                return;
-            }
-        }
+        positioningridpane = getAnchorPaneAsChessNotation(position, gridPane);
     }
 }

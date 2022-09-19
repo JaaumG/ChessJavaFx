@@ -10,9 +10,9 @@ import org.kordamp.ikonli.javafx.FontIcon;
 public class Bishop extends ChessPieces {
 
     private FontIcon symbol = new FontIcon();
-    public Bishop(Enum<Colors> color, String position, GridPane gridPane) {
-        super(color, position, gridPane);
-        symbol.setIconLiteral("mdi2c-bishop-king");
+    public Bishop(Enum<Colors> color, String position, GridPane gridPane, AnchorPane[][] anchorPanes) {
+        super(color, position, gridPane, anchorPanes);
+        symbol.setIconLiteral("mdi2c-chess-bishop");
         symbol.setIconSize(50);
         if (color.equals(Colors.WHITE)){
             symbol.setFill(Paint.valueOf("#FFFFFF"));
@@ -26,9 +26,5 @@ public class Bishop extends ChessPieces {
         this.getPositioningridpane().getChildren().add(symbol);
     }
 
-    @Override
-    public AnchorPane[] PossibleMoves(){
-        return null;
-    }
 
 }

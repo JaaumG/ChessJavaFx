@@ -7,11 +7,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Paint;
 import org.kordamp.ikonli.javafx.FontIcon;
 
-public class Rock extends ChessPieces {
+public class Rook extends ChessPieces {
+
     private FontIcon symbol = new FontIcon();
-    public Rock(Enum<Colors> color, String position, GridPane gridPane) {
-        super(color, position, gridPane);
-        symbol.setIconLiteral("mdi2c-chess-rock");
+    public Rook(Enum<Colors> color, String position, GridPane gridPane, AnchorPane[][] anchorPanes) {
+        super(color, position, gridPane, anchorPanes);
+        symbol.setIconLiteral("mdi2c-chess-rook");
         symbol.setIconSize(50);
         if (color.equals(Colors.WHITE)){
             symbol.setFill(Paint.valueOf("#FFFFFF"));
@@ -25,9 +26,6 @@ public class Rock extends ChessPieces {
         this.getPositioningridpane().getChildren().add(symbol);
     }
 
-    @Override
-    public AnchorPane[] PossibleMoves(){
-        return null;
-    }
+
 
 }

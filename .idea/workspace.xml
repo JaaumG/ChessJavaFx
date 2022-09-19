@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="added function to initialize anchorpane in every gridpane grids and set an id relative to its position">
+    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="edited constructors and upper class &quot;ChessPieces&quot;, now to define a piece's position just send as string on the constructor the location like D4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessJavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessJavaFX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" afterDir="false" />
@@ -15,8 +13,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Rock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,6 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -105,7 +101,7 @@
       <workItem from="1663594779910" duration="464000" />
       <workItem from="1663595248590" duration="776000" />
       <workItem from="1663596037017" duration="48000" />
-      <workItem from="1663596100015" duration="7940000" />
+      <workItem from="1663596100015" duration="18433000" />
     </task>
     <task id="LOCAL-00001" summary="Project started">
       <created>1663595371137</created>
@@ -135,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663599953057</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="edited constructors and upper class &quot;ChessPieces&quot;, now to define a piece's position just send as string on the constructor the location like D4">
+      <created>1663604919802</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663604919802</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +160,7 @@
     <MESSAGE value="Entities created, some library added" />
     <MESSAGE value="Board create with gridpane 8x8 and background image." />
     <MESSAGE value="added function to initialize anchorpane in every gridpane grids and set an id relative to its position" />
-    <option name="LAST_COMMIT_MESSAGE" value="added function to initialize anchorpane in every gridpane grids and set an id relative to its position" />
+    <MESSAGE value="edited constructors and upper class &quot;ChessPieces&quot;, now to define a piece's position just send as string on the constructor the location like D4" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited constructors and upper class &quot;ChessPieces&quot;, now to define a piece's position just send as string on the constructor the location like D4" />
   </component>
 </project>

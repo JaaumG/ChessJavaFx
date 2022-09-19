@@ -10,8 +10,8 @@ import org.kordamp.ikonli.javafx.FontIcon;
 public class Knight extends ChessPieces {
 
     private FontIcon symbol = new FontIcon();
-    public Knight(Enum<Colors> color, String position, GridPane gridPane) {
-        super(color, position, gridPane);
+    public Knight(Enum<Colors> color, String position, GridPane gridPane, AnchorPane[][] anchorPanes) {
+        super(color, position, gridPane, anchorPanes);
         symbol.setIconLiteral("mdi2c-chess-knight");
         symbol.setIconSize(50);
         if (color.equals(Colors.WHITE)){
@@ -27,7 +27,7 @@ public class Knight extends ChessPieces {
     }
 
     @Override
-    public AnchorPane[] PossibleMoves(){
+    public AnchorPane[] PossibleMoves(boolean diagonal, boolean straight){
         return null;
     }
 

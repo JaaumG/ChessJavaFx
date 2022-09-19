@@ -10,8 +10,8 @@ import org.kordamp.ikonli.javafx.FontIcon;
 public class Pawn extends ChessPieces {
 
     private FontIcon symbol = new FontIcon();
-    public Pawn(Enum<Colors> color, String position, GridPane gridPane) {
-        super(color, position, gridPane);
+    public Pawn(Enum<Colors> color, String position, GridPane gridPane, AnchorPane[][] anchorPanes) {
+        super(color, position, gridPane, anchorPanes);
         symbol.setIconLiteral("mdi2c-chess-pawn");
         symbol.setIconSize(50);
         if (color.equals(Colors.WHITE)){
@@ -26,9 +26,5 @@ public class Pawn extends ChessPieces {
         this.getPositioningridpane().getChildren().add(symbol);
     }
 
-    @Override
-    public AnchorPane[] PossibleMoves(){
-        return null;
-    }
 
 }
