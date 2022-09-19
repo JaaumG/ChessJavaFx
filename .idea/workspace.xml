@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="Board create with gridpane 8x8 and background image.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="added function to initialize anchorpane in every gridpane grids and set an id relative to its position">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessJavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessJavaFX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chess/Board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chess/Board.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chess/Board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chess/Board.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Rock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27586207",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jaaum\IdeaProjects\ChessJavaFX\src\main\resources" />
@@ -93,7 +105,7 @@
       <workItem from="1663594779910" duration="464000" />
       <workItem from="1663595248590" duration="776000" />
       <workItem from="1663596037017" duration="48000" />
-      <workItem from="1663596100015" duration="3441000" />
+      <workItem from="1663596100015" duration="7940000" />
     </task>
     <task id="LOCAL-00001" summary="Project started">
       <created>1663595371137</created>
@@ -116,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663598159797</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added function to initialize anchorpane in every gridpane grids and set an id relative to its position">
+      <created>1663599953057</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663599953057</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +156,7 @@
     <MESSAGE value="Project started" />
     <MESSAGE value="Entities created, some library added" />
     <MESSAGE value="Board create with gridpane 8x8 and background image." />
-    <option name="LAST_COMMIT_MESSAGE" value="Board create with gridpane 8x8 and background image." />
+    <MESSAGE value="added function to initialize anchorpane in every gridpane grids and set an id relative to its position" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function to initialize anchorpane in every gridpane grids and set an id relative to its position" />
   </component>
 </project>
