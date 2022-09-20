@@ -23,6 +23,7 @@ public class BoardController implements Initializable {
     private ImageView boardImage;
     @FXML
     private GridPane gridPane;
+    private ChessPieces[] chessPieces = new ChessPieces[32];
 
     public AnchorPane[][] anchorPanes = new AnchorPane[8][8];
     @Override
@@ -58,7 +59,7 @@ public class BoardController implements Initializable {
         Bishop whiteBishopRight = new Bishop(Colors.WHITE, "F1", gridPane, anchorPanes);
         Bishop blackBishopLeft = new Bishop(Colors.BLACK, "C8", gridPane, anchorPanes);
         Bishop blackBishopRight = new Bishop(Colors.BLACK, "F8", gridPane, anchorPanes);
-        Knight whiteKnightLeft = new Knight(Colors.WHITE, "B1", gridPane, anchorPanes);
+        Knight whiteKnightLeft = new Knight(Colors.WHITE, "E3", gridPane, anchorPanes);
         Knight whiteKnightRight = new Knight(Colors.WHITE, "G1", gridPane, anchorPanes);
         Knight blackKnightLeft = new Knight(Colors.BLACK, "B8", gridPane, anchorPanes);
         Knight blackKnightRight = new Knight(Colors.BLACK, "G8", gridPane, anchorPanes);
@@ -66,9 +67,26 @@ public class BoardController implements Initializable {
         Rook whiteRookRight = new Rook(Colors.WHITE, "H1", gridPane, anchorPanes);
         Rook blackRookLeft = new Rook(Colors.BLACK, "A8", gridPane, anchorPanes);
         Rook blackRookRight = new Rook(Colors.BLACK, "H8", gridPane, anchorPanes);
-        for (int i = 0; i < 8; i++) {
-            new Pawn(Colors.WHITE, String.valueOf((char)(65+i))+String.valueOf(2),gridPane, anchorPanes);
-            new Pawn(Colors.BLACK, String.valueOf((char)(65+i))+String.valueOf(7),gridPane, anchorPanes);
+        Pawn whitePawA = new Pawn(Colors.WHITE, "A2",gridPane, anchorPanes);
+        Pawn whitePawB = new Pawn(Colors.WHITE, "B2",gridPane, anchorPanes);
+        Pawn whitePawC = new Pawn(Colors.WHITE, "C2",gridPane, anchorPanes);
+        Pawn whitePawD = new Pawn(Colors.WHITE, "D2",gridPane, anchorPanes);
+        Pawn whitePawE = new Pawn(Colors.WHITE, "E2",gridPane, anchorPanes);
+        Pawn whitePawF = new Pawn(Colors.WHITE, "F2",gridPane, anchorPanes);
+        Pawn whitePawG = new Pawn(Colors.WHITE, "G2",gridPane, anchorPanes);
+        Pawn whitePawH = new Pawn(Colors.WHITE, "H2",gridPane, anchorPanes);
+        Pawn blackPawA = new Pawn(Colors.BLACK, "A7",gridPane, anchorPanes);
+        Pawn blackPawB = new Pawn(Colors.BLACK, "B7",gridPane, anchorPanes);
+        Pawn blackPawC = new Pawn(Colors.BLACK, "C7",gridPane, anchorPanes);
+        Pawn blackPawD = new Pawn(Colors.BLACK, "D7",gridPane, anchorPanes);
+        Pawn blackPawE = new Pawn(Colors.BLACK, "E7",gridPane, anchorPanes);
+        Pawn blackPawF = new Pawn(Colors.BLACK, "F7",gridPane, anchorPanes);
+        Pawn blackPawG = new Pawn(Colors.BLACK, "G7",gridPane, anchorPanes);
+        Pawn blackPawH = new Pawn(Colors.BLACK, "H7",gridPane, anchorPanes);
+        chessPieces = new ChessPieces[]{whiteKing, blackKing, whiteQueen, blackQueen, whiteBishopLeft, whiteBishopRight, blackBishopLeft, blackBishopRight, whiteKnightLeft, whiteKnightRight, blackKnightLeft, blackKnightRight,whiteRookLeft, whiteRookRight, blackRookRight, blackRookLeft, whitePawA, whitePawB,whitePawC,whitePawD,whitePawE,whitePawF,whitePawG,whitePawH,blackPawA,blackPawB,blackPawC,blackPawD,blackPawE,blackPawF,blackPawG,blackPawH};
+        for (AnchorPane a: blackPawA.PossibleMoves()) {
+
         }
+
     }
 }
