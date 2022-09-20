@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="Defined start position to every piece, algorithm to run an matrix by x and y, this way it is able to see which house is able for a certain piece to move, later i'll develop an algorith for the knight and pawn.&#10;Rock -&gt; Rook corretions, wrong icon on knight and bishop alredy fixed">
+    <list default="true" id="bf26c9c1-6fe9-496a-bfb4-209d6616b77c" name="Changes" comment="All pieces now have its own movements, and event for when icon is clicked">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_18_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessJavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessJavaFX.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chess/ChessPieces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pieces/Bishop.java" afterDir="false" />
@@ -58,22 +71,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Jaaum/IdeaProjects/ChessJavaFX",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27586207",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jaaum\IdeaProjects\ChessJavaFX\src\main\resources" />
@@ -103,7 +117,9 @@
       <workItem from="1663595248590" duration="776000" />
       <workItem from="1663596037017" duration="48000" />
       <workItem from="1663596100015" duration="19126000" />
-      <workItem from="1663625080906" duration="6502000" />
+      <workItem from="1663625080906" duration="7398000" />
+      <workItem from="1663640084785" duration="110000" />
+      <workItem from="1663685207874" duration="4345000" />
     </task>
     <task id="LOCAL-00001" summary="Project started">
       <created>1663595371137</created>
@@ -147,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663615430161</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="All pieces now have its own movements, and event for when icon is clicked">
+      <created>1663633757680</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663633757680</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +194,7 @@
     <MESSAGE value="added function to initialize anchorpane in every gridpane grids and set an id relative to its position" />
     <MESSAGE value="edited constructors and upper class &quot;ChessPieces&quot;, now to define a piece's position just send as string on the constructor the location like D4" />
     <MESSAGE value="Defined start position to every piece, algorithm to run an matrix by x and y, this way it is able to see which house is able for a certain piece to move, later i'll develop an algorith for the knight and pawn.&#10;Rock -&gt; Rook corretions, wrong icon on knight and bishop alredy fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Defined start position to every piece, algorithm to run an matrix by x and y, this way it is able to see which house is able for a certain piece to move, later i'll develop an algorith for the knight and pawn.&#10;Rock -&gt; Rook corretions, wrong icon on knight and bishop alredy fixed" />
+    <MESSAGE value="All pieces now have its own movements, and event for when icon is clicked" />
+    <option name="LAST_COMMIT_MESSAGE" value="All pieces now have its own movements, and event for when icon is clicked" />
   </component>
 </project>

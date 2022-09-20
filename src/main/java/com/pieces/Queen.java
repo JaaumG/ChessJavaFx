@@ -22,7 +22,7 @@ public class Queen extends ChessPieces {
                 AnchorPane anchorPane = (AnchorPane) anchorpane;
                 anchorPane.setBackground(null);
             }
-            AnchorPane[] originalPossibleMoves = PossibleMoves();
+            AnchorPane[] originalPossibleMoves = PossibleMoves((FontIcon) event.getSource());
             for (AnchorPane anchorpane:originalPossibleMoves) {
                 anchorpane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#555555"),null,null)));
             }

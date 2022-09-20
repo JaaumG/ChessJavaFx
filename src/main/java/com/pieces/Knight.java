@@ -22,11 +22,10 @@ public class Knight extends ChessPieces {
                 AnchorPane anchorPane = (AnchorPane) anchorpane;
                 anchorPane.setBackground(null);
             }
-            AnchorPane[] originalPossibleMoves = PossibleMoves();
+            AnchorPane[] originalPossibleMoves = PossibleMoves((FontIcon)event.getSource());
             for (AnchorPane anchorpane:originalPossibleMoves) {
                 anchorpane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#555555"),null,null)));
             }
-
         });
         symbol.setIconSize(50);
         if (color.equals(Colors.WHITE)){
@@ -42,39 +41,39 @@ public class Knight extends ChessPieces {
     }
 
     @Override
-    public AnchorPane[] PossibleMoves(){
+    public AnchorPane[] PossibleMoves(FontIcon fontIcon){
         int positionx = getAnchorPaneX(), positiony = getAnchorPaneY();
         ArrayList<AnchorPane> listPossibleMoves = new ArrayList<>();
         if (positionx - 1 >= 0 && positiony - 2 >= 0) {
-            if(getAnchorPanes()[positionx - 1][positiony - 2].getChildren().size()==0 || ((FontIcon)getAnchorPanes()[positionx - 1][positiony - 2].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx - 1][positiony - 2].getChildren().size()==0 || !((FontIcon)getAnchorPanes()[positionx - 1][positiony - 2].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx - 1][positiony - 2]);//NW
             }
         }if (positionx + 1 <= 7 && positiony + 2 <= 7) {
-            if (getAnchorPanes()[positionx + 1][positiony + 2].getChildren().size()==0 || ((FontIcon)getAnchorPanes()[positionx + 1][positiony + 2].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if (getAnchorPanes()[positionx + 1][positiony + 2].getChildren().size()==0 || !((FontIcon)getAnchorPanes()[positionx + 1][positiony + 2].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx + 1][positiony + 2]);//SE
             }
         }if (positionx - 1 >= 0 && positiony + 2 <= 7) {
-            if(getAnchorPanes()[positionx - 1][positiony + 2].getChildren().size()==0 || ((FontIcon)getAnchorPanes()[positionx - 1][positiony + 2].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx - 1][positiony + 2].getChildren().size()==0 || !((FontIcon)getAnchorPanes()[positionx - 1][positiony + 2].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx - 1][positiony + 2]);//SW
             }
         }if (positionx + 1 <= 7 && positiony - 2 >= 0) {
-            if(getAnchorPanes()[positionx + 1][positiony - 2].getChildren().size()==0 || ((FontIcon)getAnchorPanes()[positionx + 1][positiony - 2].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx + 1][positiony - 2].getChildren().size()==0 || !((FontIcon)getAnchorPanes()[positionx + 1][positiony - 2].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx + 1][positiony - 2]); //NE
             }
         }if (positionx - 2 >= 0 && positiony - 1 >= 0) {
-            if(getAnchorPanes()[positionx - 2][positiony - 1].getChildren().size()==0 || ((FontIcon)getAnchorPanes()[positionx - 2][positiony - 1].getChildren().get(0)).getFill()!=symbol.getFill()){
+            if(getAnchorPanes()[positionx - 2][positiony - 1].getChildren().size()==0 || !((FontIcon)getAnchorPanes()[positionx - 2][positiony - 1].getChildren().get(0)).getFill().equals(fontIcon.getFill())){
                 listPossibleMoves.add(getAnchorPanes()[positionx - 2][positiony - 1]);//NW
             }
         }if (positionx + 2 <= 7 && positiony + 1 <= 7) {
-            if(getAnchorPanes()[positionx + 2][positiony + 1].getChildren().size()==0|| ((FontIcon)getAnchorPanes()[positionx + 2][positiony + 1].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx + 2][positiony + 1].getChildren().size()==0|| !((FontIcon)getAnchorPanes()[positionx + 2][positiony + 1].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx + 2][positiony + 1]);//SE
             }
         }if (positionx - 2 >= 0 && positiony + 1 <= 7) {
-            if(getAnchorPanes()[positionx - 2][positiony + 1].getChildren().size()==0|| ((FontIcon)getAnchorPanes()[positionx -2][positiony + 1].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx - 2][positiony + 1].getChildren().size()==0|| !((FontIcon)getAnchorPanes()[positionx -2][positiony + 1].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx - 2][positiony + 1]);//SW
             }
         }if (positionx + 2 <= 7 && positiony - 1 >= 0) {
-            if(getAnchorPanes()[positionx + 2][positiony - 1].getChildren().size()==0|| ((FontIcon)getAnchorPanes()[positionx + 2][positiony - 1].getChildren().get(0)).getFill()!=symbol.getFill()) {
+            if(getAnchorPanes()[positionx + 2][positiony - 1].getChildren().size()==0|| !((FontIcon)getAnchorPanes()[positionx + 2][positiony - 1].getChildren().get(0)).getFill().equals(fontIcon.getFill())) {
                 listPossibleMoves.add(getAnchorPanes()[positionx + 2][positiony - 1]); //NE
             }
         }

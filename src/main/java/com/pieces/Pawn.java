@@ -22,7 +22,7 @@ public class Pawn extends ChessPieces {
                 AnchorPane anchorPane = (AnchorPane) anchorpane;
                 anchorPane.setBackground(null);
             }
-            AnchorPane[] originalPossibleMoves = PossibleMoves();
+            AnchorPane[] originalPossibleMoves = PossibleMoves((FontIcon) event.getSource());
             for (AnchorPane anchorpane:originalPossibleMoves) {
                 anchorpane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#555555"),null,null)));
             }
@@ -42,7 +42,7 @@ public class Pawn extends ChessPieces {
     }
 
     @Override
-    public AnchorPane[] PossibleMoves(){
+    public AnchorPane[] PossibleMoves(FontIcon fontIcon){
         int positionx = getAnchorPaneX(), positiony = getAnchorPaneY(), k=0,l=0;
         ArrayList<AnchorPane> listPossibleMoves = new ArrayList<>();
         if(getColor().equals(Colors.WHITE)) {
@@ -50,14 +50,22 @@ public class Pawn extends ChessPieces {
                 listPossibleMoves.add(getAnchorPanes()[positionx][positiony - 1]); //N
                 listPossibleMoves.add(getAnchorPanes()[positionx][positiony - 2]); //N
             } else {
-                listPossibleMoves.add(getAnchorPanes()[positionx][positiony - 1]); //N
+                if(positiony-1>=0) {
+                    if(getAnchorPanes()[positionx][positiony + 1].getChildren().size()==0) {
+                        listPossibleMoves.add(getAnchorPanes()[positionx][positiony - 1]); //N
+                    }
+                }
             }
         }else{
             if (getMoveCount() == 0) {
                 listPossibleMoves.add(getAnchorPanes()[positionx][positiony + 1]); //N
                 listPossibleMoves.add(getAnchorPanes()[positionx][positiony + 2]); //N
             } else {
-                listPossibleMoves.add(getAnchorPanes()[positionx][positiony + 1]); //N
+                if(positiony+1<8) {
+                    if(getAnchorPanes()[positionx][positiony + 1].getChildren().size()==0) {
+                        listPossibleMoves.add(getAnchorPanes()[positionx][positiony + 1]); //N
+                    }
+                }
             }
         }
         int listSize = listPossibleMoves.size();

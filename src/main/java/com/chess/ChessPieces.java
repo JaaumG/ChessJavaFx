@@ -2,6 +2,7 @@ package com.chess;
 
 import com.Enums.Colors;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
@@ -12,7 +13,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.util.ArrayList;
 
-public abstract class ChessPieces {
+public class ChessPieces extends Node {
 
     private final Enum<Colors> color;
     private String position;
@@ -64,27 +65,72 @@ public abstract class ChessPieces {
         moveCount+=1;
     }
 
-    public AnchorPane[] PossibleMoves() {
+    public AnchorPane[] PossibleMoves(FontIcon fontIcon) {
         int positionx = getAnchorPaneX(), positiony = getAnchorPaneY(), k=0,l=0;
         ArrayList<AnchorPane> listPossibleMoves = new ArrayList<>();
         for (int i = 1; i < 8; i++) {
             if (positionx - i >= 0) {
-                listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony]); //W
-            }if (positionx + i <= 7) {
-                listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony]); //E
-            }if(positiony-i>=0){
-                listPossibleMoves.add(getAnchorPanes()[positionx][positiony - i]); //N
-            }if (positiony + i <= 7) {
-                listPossibleMoves.add(getAnchorPanes()[positionx][positiony + i]); //S
+                if(getAnchorPanes()[positionx - i][positiony].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony]); //W
+                }else{
+                    break;
+                }
             }
+        }for (int i = 1; i < 8; i++) {
+            if (positionx + i <= 7) {
+                if(getAnchorPanes()[positionx + i][positiony].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony]); //E
+                }else{
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
+            if(positiony-i>=0){
+                if(getAnchorPanes()[positionx][positiony - i].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx][positiony - i]); //N
+                }else{
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
+            if (positiony + i <= 7) {
+                if(getAnchorPanes()[positionx][positiony + i].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx][positiony + i]); //S
+                }else {
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
             if (positionx - i >= 0 && positiony - i >= 0) {
-                listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony - i]);//NW
-            }if (positionx + i <= 7 && positiony + i <= 7) {
-                        listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony + i]);//SE
-            }if (positionx - i >= 0 && positiony + i <= 7) {
+                if(getAnchorPanes()[positionx - i][positiony - i].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony - i]);//NW
+                }else{
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
+            if (positionx + i <= 7 && positiony + i <= 7) {
+                if(getAnchorPanes()[positionx + i][positiony + i].getChildren().size()==0) {
+                    listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony + i]);//SE
+                }else{
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
+            if (positionx - i >= 0 && positiony + i <= 7) {
+                if(getAnchorPanes()[positionx - i][positiony + i].getChildren().size()==0) {
                     listPossibleMoves.add(getAnchorPanes()[positionx - i][positiony + i]);//SW
-            }if (positionx + i <= 7 && positiony - i >= 0) {
+                }else{
+                    break;
+                }
+            }
+        }for (int i = 1; i < 8; i++) {
+            if (positionx + i <= 7 && positiony - i >= 0) {
+                if(getAnchorPanes()[positionx + i][positiony - i].getChildren().size()==0) {
                     listPossibleMoves.add(getAnchorPanes()[positionx + i][positiony - i]); //NE
+                }else{
+                    break;
+                }
             }
         }
         int listSize = listPossibleMoves.size();

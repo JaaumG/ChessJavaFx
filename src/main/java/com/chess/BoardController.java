@@ -59,7 +59,7 @@ public class BoardController implements Initializable {
         Bishop whiteBishopRight = new Bishop(Colors.WHITE, "F1", gridPane, anchorPanes);
         Bishop blackBishopLeft = new Bishop(Colors.BLACK, "C8", gridPane, anchorPanes);
         Bishop blackBishopRight = new Bishop(Colors.BLACK, "F8", gridPane, anchorPanes);
-        Knight whiteKnightLeft = new Knight(Colors.WHITE, "E3", gridPane, anchorPanes);
+        Knight whiteKnightLeft = new Knight(Colors.WHITE, "B1", gridPane, anchorPanes);
         Knight whiteKnightRight = new Knight(Colors.WHITE, "G1", gridPane, anchorPanes);
         Knight blackKnightLeft = new Knight(Colors.BLACK, "B8", gridPane, anchorPanes);
         Knight blackKnightRight = new Knight(Colors.BLACK, "G8", gridPane, anchorPanes);
@@ -84,9 +84,7 @@ public class BoardController implements Initializable {
         Pawn blackPawG = new Pawn(Colors.BLACK, "G7",gridPane, anchorPanes);
         Pawn blackPawH = new Pawn(Colors.BLACK, "H7",gridPane, anchorPanes);
         chessPieces = new ChessPieces[]{whiteKing, blackKing, whiteQueen, blackQueen, whiteBishopLeft, whiteBishopRight, blackBishopLeft, blackBishopRight, whiteKnightLeft, whiteKnightRight, blackKnightLeft, blackKnightRight,whiteRookLeft, whiteRookRight, blackRookRight, blackRookLeft, whitePawA, whitePawB,whitePawC,whitePawD,whitePawE,whitePawF,whitePawG,whitePawH,blackPawA,blackPawB,blackPawC,blackPawD,blackPawE,blackPawF,blackPawG,blackPawH};
-        for (AnchorPane a: blackPawA.PossibleMoves()) {
 
-        }
 
     }
 }
